@@ -201,9 +201,13 @@ class _HomePageState extends State<HomePage> {
                             alignment: Alignment.center,
                             child: LayoutBuilder(
                               builder: (BuildContext context, BoxConstraints constraints) {
+                                var height = constraints.maxWidth - constraints.maxWidth/2.2;
+                                if(height < 160){
+                                  height = 160;
+                                }
                                 return
                                   Container(
-                                    width: constraints.maxWidth/1.2,
+                                    width: height,
                                     alignment: Alignment.centerLeft,
                                     decoration: BoxDecoration(
                                         color: Colors.white12,
